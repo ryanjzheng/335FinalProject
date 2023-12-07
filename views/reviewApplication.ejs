@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Application</title>
+    <style>
+        .form-container {
+            border: 2px solid gray;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Review Application</h1>
+
+    <form action="/reviewApplication" method="post">
+        <div class="form-container">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </div>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit Request</button>
+    </form>
+    <hr>
+
+    <a href="/">HOME</a>
+</body>
+</html>

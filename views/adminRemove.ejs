@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Remove</title>
+</head>
+
+<body>
+    <h1>Removing All Applicants</h1>
+
+    <form action="/adminRemove" method="post" onsubmit="return showConfirmation()">
+
+        <button type="submit">Remove applicants</button>
+    </form>
+    <hr>
+
+    <a href="/">HOME</a>
+
+    <script>
+        function showConfirmation() {
+            return confirm("Are you sure you want to remove all applications?");
+        }
+    </script>
+</body>
+</html>

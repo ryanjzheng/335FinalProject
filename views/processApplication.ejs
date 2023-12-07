@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Confirmation</title>
+    <style>
+        .label {
+            font-weight: bold;
+        }
+
+        #timestamp {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applicants Data</h1>
+
+    <div class="applicant-info">
+        <% if (applicant) { %>
+            <span class="label">Name:</span>
+            <span class="data"><%= applicant.name %></span><br>
+
+            <span class="label">Email:</span>
+            <span class="data"><%= applicant.email %></span><br>
+
+            <span class="label">GPA:</span>
+            <span class="data"><%= applicant.gpa %></span><br>
+
+            <span class="label">Background Information:</span><br>
+            <span class="data"><%= applicant.background %></span><br>
+        <% } else { %>
+            <p>Application not found.</p>
+        <% } %>
+    </div>
+    <hr>
+    <b>Task completed at:</b>
+    <span id="timestamp"></span>
+    <hr>
+
+    <a href="/">HOME</a>
+
+    <script>
+        //Time Stamp
+        const timestampElement = document.getElementById('timestamp');
+        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', 
+        hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+        const timestamp = new Date().toLocaleString('en-US', options);
+        timestampElement.textContent = timestamp;
+    </script>
+</body>
+</html>
