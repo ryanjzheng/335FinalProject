@@ -15,12 +15,18 @@
     </style>
 </head>
 <body>
-    <h1>Review Application</h1>
+    <h1>Filter By ...</h1>
 
     <form action="/reviewApplication" method="post">
         <div class="form-container">
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <label for="weightCategory">Weight Category</label>
+            <select id="weightCategory" name="weightCategory" required>
+                <option value="60">60kg</option>
+                <option value="67.5">67.5kg</option>
+                <option value="75">75kg</option>
+                <option value="82.5">82.5kg</option>
+            </select>
+            <br><br>
         </div>
 
         <button type="reset">Reset</button>
@@ -28,6 +34,8 @@
     </form>
     <hr>
 
-    <a href="/">HOME</a>
+    <a href="/">
+        <button>Home</button>
+    </a>
 </body>
 </html>
