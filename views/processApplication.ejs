@@ -18,25 +18,29 @@
     <h1>Applicants Data</h1>
 
     <div class="applicant-info">
-        <% if (applicant) { %>
-            <span class="label">Name:</span>
-            <span class="data"><%= applicant.name %></span><br>
+        <% if (applicant && applicant.length > 0) { %>
+            <% applicant.forEach((app) => { %>
+                <span class="label">Name:</span>
+                <span class="data"><%= app.name %></span><br>
 
-            <span class="label">Email:</span>
-            <span class="data"><%= applicant.email %></span><br>
+                <span class="label">Email:</span>
+                <span class="data"><%= app.email %></span><br>
 
-            <span class="label">Weight:</span>
-            <span class="data"><%= applicant.weight %></span><br>
-            <span class="label">Lift:</span>
-            <span class="data"><%= applicant.lift %></span><br>
+                <span class="label">Weight:</span>
+                <span class="data"><%= app.weight %></span><br>
+                <span class="label">Lift:</span>
+                <span class="data"><%= app.lift %></span><br>
 
-            <span class="label">Background Information:</span><br>
-            <span class="data"><%= applicant.background %></span><br>
+                <span class="label">Background Information:</span><br>
+                <span class="data"><%= app.background %></span><br>
+
+                <hr>
+            <% }); %>
         <% } else { %>
-            <p>Application not found.</p>
+            <p>No applicants found.</p>
         <% } %>
     </div>
-    <hr>
+
     <b>Task completed at:</b>
     <span id="timestamp"></span>
     <hr>
