@@ -32,8 +32,6 @@ app.use('/', require('./routes/home'));
 app.use('/apply', require('./routes/apply'));
 app.use('/processApplication', require('./routes/processApplication'));
 app.use('/reviewApplication', require('./routes/reviewApplication'));
-app.use('/adminGPA', require('./routes/adminGPA'));
-app.use('/adminRemove', require('./routes/adminRemove'));
 
 app.listen(PORT, () => {
 console.log(`Web server started and running at http://localhost:${PORT}`);
