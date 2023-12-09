@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
         const applicant = await Applicant.findOne({ email });
 
         // Render the processApplication page with the applicant data
+        
         res.render('processApplication', { applicant });
     } catch (error) {
         console.error(error);
