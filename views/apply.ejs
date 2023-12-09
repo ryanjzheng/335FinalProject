@@ -27,10 +27,20 @@
             <label for="email">Email Address:</label>
             <input type="email" id="email" name="email" required><br><br>
 
-            <label for="gpa">GPA:</label>
-            <input type="text" id="gpa" name="gpa" required><br><br>
+            <label for="weightClasses">Weight Category (kgs):</label>
+            <select id="weightClasses" name="weight" required>
+                <option value="60">60</option>
+                <option value="67.5">67.5</option>
+                <option value="75">75</option>
+                <option value="82.5">82.5</option>
+                <!-- Add more options as needed -->
+            </select><br><br>
 
-            <label for="background">Background Information:</label><br>
+            <label for="lift">Total SBD</label>
+            <input type="text" id="lift" name="lift" required><br><br>
+            
+
+            <label for="background">Additional Comments:</label><br>
             <textarea id="background" name="background" rows="4" required></textarea>
         </div>
         <button type="reset">Reset</button>
