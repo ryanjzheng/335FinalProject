@@ -9,10 +9,11 @@ router.get('/', (req, res) => {
 // Handle reviewing an existing application
 router.post('/', async (req, res) => {
     try {
-        const { email } = req.body;
+        const { weightCateogry } = req.body;
 
         // Find the applicant in the database based on the email
-        const applicant = await Applicant.findOne({ email });
+        const applicant = await Applicant.find({ weightCateogry });
+        console.log(applicant);
 
         // Render the processApplication template with the applicant information
         res.render('processApplication', { applicant });

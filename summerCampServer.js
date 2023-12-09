@@ -33,7 +33,6 @@ app.use('/apply', require('./routes/apply'));
 app.use('/processApplication', require('./routes/processApplication'));
 app.use('/reviewApplication', require('./routes/reviewApplication'));
 
-
 app.listen(PORT, () => {
 console.log(`Web server started and running at http://localhost:${PORT}`);
     const rl = readline.createInterface({
