@@ -10,7 +10,11 @@ const applicantSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    gpa: {
+    weight: {
+        type: Number,
+        required: true
+    },
+    lift: {
         type: Number,
         required: true
     },

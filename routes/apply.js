@@ -9,14 +9,15 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
     try {
         // Extract data from the submitted form
-        const { name, email, gpa, background } = req.body;
+        const { name, email, weight, lift, background } = req.body;
 
         // Create a new applicant instance using the Mongoose model
         const newApplicant = new Applicant({
             name,
             email,
-            gpa,
-            background,
+            weight,
+            lift,
+            background
         });
 
         // Save the applicant to the database
