@@ -4,13 +4,14 @@
   "description": "",
   "main": "summerCampServer.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
