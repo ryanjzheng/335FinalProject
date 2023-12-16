@@ -1,0 +1,46 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* Added to stack items vertically */
+    min-height: 100vh;
+}
+
+#logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    color: #e21833;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e21833;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #ffd200;
+}

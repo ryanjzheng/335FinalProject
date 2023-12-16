@@ -9,6 +9,7 @@ require("./auth")
 require('dotenv').config();
 
 const app = express();
+app.use(express.static('public'));
 
 //important for setting the user session
 app.use(session({
