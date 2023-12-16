@@ -7,6 +7,8 @@ router.get('/', async (req, res) => {
         // Extract the email parameter from the request
         const email = req.query.email;
 
+        console.log("email", email);
+
         // Fetch the applicant with the given email from the database
         const applicant = await Applicant.findOne({ email });
 
