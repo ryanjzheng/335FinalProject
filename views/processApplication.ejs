@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application Confirmation</title>
     <style>
-        .label {
-            font-weight: bold;
-        }
+      .label {
+        font-weight: bold;
+      }
 
-        #timestamp {
-            font-weight: bold;
-        }
+      #timestamp {
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Applicants Data</h1>
 
     <div class="applicant-info">
-        <% if (applicant && applicant.length > 0) { %>
-            <% applicant.forEach((app) => { %>
-                <span class="label">Name:</span>
-                <span class="data"><%= app.name %></span><br>
+      <% if (applicant) { %> <% if (Array.isArray(applicant)) { %> <%
+      applicant.forEach((app) => { %>
+      <span class="label">Name:</span>
+      <span class="data"><%= app.name %></span><br />
 
-                <span class="label">Email:</span>
-                <span class="data"><%= app.email %></span><br>
+      <span class="label">Email:</span>
+      <span class="data"><%= app.email %></span><br />
 
-                <span class="label">Weight:</span>
-                <span class="data"><%= app.weight %></span><br>
-                <span class="label">Lift:</span>
-                <span class="data"><%= app.lift %></span><br>
+      <span class="label">Weight:</span>
+      <span class="data"><%= app.weight %></span><br />
+      <span class="label">Lift:</span>
+      <span class="data"><%= app.lift %></span><br />
 
-                <span class="label">Background Information:</span><br>
-                <span class="data"><%= app.background %></span><br>
+      <span class="label">Background Information:</span><br />
+      <span class="data"><%= app.background %></span><br />
 
-                <hr>
-            <% }); %>
-        <% } else { %>
-            <p>No applicants found.</p>
-        <% } %>
+      <hr />
+      <% }); %> <% } else { %>
+      <span class="label">Name:</span>
+      <span class="data"><%= applicant.name %></span><br />
+
+      <span class="label">Email:</span>
+      <span class="data"><%= applicant.email %></span><br />
+
+      <span class="label">Weight:</span>
+      <span class="data"><%= applicant.weight %></span><br />
+      <span class="label">Lift:</span>
+      <span class="data"><%= applicant.lift %></span><br />
+
+      <span class="label">Background Information:</span><br />
+      <span class="data"><%= applicant.background %></span><br />
+
+      <hr />
+      <% } %> <% } else { %>
+      <p>No applicants found.</p>
+      <% } %>
     </div>
 
-    <b>Task completed at:</b>
-    <span id="timestamp"></span>
-    <hr>
+    
+    <a href="/home">HOME</a>
 
-    <a href="/">HOME</a>
-
-    <script>
-        //Time Stamp
-        const timestampElement = document.getElementById('timestamp');
-        const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', 
-        hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-        const timestamp = new Date().toLocaleString('en-US', options);
-        timestampElement.textContent = timestamp;
-    </script>
-</body>
+    
+  </body>
 </html>

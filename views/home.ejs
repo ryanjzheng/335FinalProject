@@ -1,23 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-</head>
-<body>
-  <h1>Welcome to Barbell Club</h1>
-  
-  <h2>Activities</h2>
-  <span>Apply to be a member today </span> 
-  <a href="apply">
-    <button>Apply Now</button>
-  </a><br><br>
-  <span>Filter our current members. </span> 
-  <a href="reviewApplication">
-    <button>Filter</button>
-  </a>
-  <hr>
-  <button>Make Google Sheets of all members</button>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="export.js" defer></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1,
+      h2,
+      span {
+        margin-bottom: 10px;
+      }
+
+      label[for="city"] {
+        font-size: 1rem;
+      }
+
+      button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #e21833;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ffd200;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Welcome to UMD Barbell Club</h1>
+
+    <h2>Options</h2>
+    <span>Apply To Be A Member Today </span>
+    <a href="apply"><button>Apply Now</button></a><br /><br />
+    <span>Filter Members By Weight Class </span>
+    <a href="reviewApplication"><button>Filter</button></a>
+    <hr />
+
+    <h1>Find A Gym Near You</h1>
+    <form action="/findGyms" method="get">
+      <div class="form-container">
+        <label for="city">Enter City:</label>
+        <input type="text" id="city" name="city" required />
+        <br />
+        <button type="submit">Search For Gyms</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <hr />
+
+    <form action="/logout">
+      <input type="submit" value="Logout" />
+    </form>
+  </body>
 </html>
