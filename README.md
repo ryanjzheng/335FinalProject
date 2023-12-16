@@ -7,3 +7,11 @@ Description: Our application mimics a club sign up page along with a filter curr
 API Link:
 
 Youtube Video:
+
+Database user info (Which is also in .env):
+Username: user1
+Password: TEpKplKG5rDE662U
+
+
+to run, run npm i node start
+if running locally, use http://localhost:3000/google/callback as callback url, else uncomment other url if in prod
