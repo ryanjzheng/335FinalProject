@@ -7,3 +7,7 @@ Description: Our application mimics a club sign up page along with a filter curr
 API Link:
 
 Youtube Video:
+
+Database user info (Which is also in .env):
+Username: user1
+Password: TEpKplKG5rDE662U
