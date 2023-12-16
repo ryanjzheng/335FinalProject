@@ -11,3 +11,7 @@ Youtube Video:
 Database user info (Which is also in .env):
 Username: user1
 Password: TEpKplKG5rDE662U
+
+
+to run, run npm i node start
+if running locally, use http://localhost:3000/google/callback as callback url, else uncomment other url if in prod
