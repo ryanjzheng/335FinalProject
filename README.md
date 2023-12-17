@@ -19,5 +19,5 @@ Username: user1
 Password: TEpKplKG5rDE662U
 
 
-to run, run npm i node start
+to run, run "npm i", then "node server.js"
 if running locally, use http://localhost:3000/google/callback as the callback URL, else uncomment other URL if in prod
